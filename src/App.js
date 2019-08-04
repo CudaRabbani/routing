@@ -3,21 +3,27 @@ import './App.css';
 import {Route, Switch, Redirect} from 'react-router-dom';
 
 import NavBar from './components/navbar'
-import Products from "./components/products";
-import ProductDetails from "./components/productDetails";
-import Posts from "./components/posts";
-import Home from "./components/home";
+import LoginForm from "./components/loginForm"
+import Movies from "./components/movies";
+import Customers from "./components/customers";
+import Rentals from "./components/rentals";
 import NotFound from "./components/notfound";
-import Dashboard from "./components/admin/dashboard";
 
 class App extends Component {
   render() {
     return (
       <div>
         <NavBar/>
-          <div className="content">
+          <div className="container m-2">
               <Switch>
-                  <Route path="/products/:id" component={ProductDetails} />
+                  <Route path="/login" component={LoginForm} />
+                  <Route path="/movies" exact component={Movies} />
+                  <Route path="/customers" component={Customers} />
+                  <Route path="/rentals" component={Rentals} />
+                  <Route path="/not-found" component={NotFound} />
+                  <Redirect from="/" exact to="/movies" />
+                  <Redirect to="/not-found"/>
+                  {/*<Route path="/products/:id" component={ProductDetails} />
                   <Route path="/products"
                          render = {(props) => <Products sortBy="newest" {...props} />}
                   />
@@ -26,7 +32,7 @@ class App extends Component {
                   <Route path="/admin" component={Dashboard} />
                   <Route path="/not-found" component={NotFound} />
                   <Route path="/" exact component={Home} />
-                  <Redirect to="/not-found" />
+                  <Redirect to="/not-found" />*/}
               </Switch>
           </div>
       </div>
