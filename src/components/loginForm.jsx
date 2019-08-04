@@ -4,13 +4,30 @@ import Input from "./common/input";
 class LoginForm extends Component {
 
     state={
-        account: {username: '', password: ''}
+        account: {username: '', password: ''},
+        errors: {}
+    };
+
+    validate = () => {
+        const {account} = this.state;
+        const errors={};
+
+        if (account.username.trim() === '') {
+            errors.username="Username is required.";
+        }
+        if (account.password.trim() === '') {
+            errors.password="Password is required.";
+        }
+        return Object.keys(errors).length === 0 ? null : errors;
     };
 
     handleSubmit = e => {
         e.preventDefault();
-        const username = this.username.current.value;
-        console.log(username);
+        const errors = this.validate();
+        this.setState({errors: errors || {}});
+        if (errors) return;
+
+        console.log('submit');
     };
 
     handleChange = e => {
@@ -19,7 +36,7 @@ class LoginForm extends Component {
         this.setState({account});
     };
     render() {
-        const {account} = this.state;
+        const {account, errors} = this.state;
         return (
             <div className="containter">
                 <h3>Login</h3>
@@ -29,6 +46,7 @@ class LoginForm extends Component {
                         label="Username"
                         value={account.username}
                         type="text"
+                        error={errors.username ? errors.username: ''}
                         onChange={this.handleChange}
                     />
                     <Input
@@ -36,6 +54,7 @@ class LoginForm extends Component {
                         label="Password"
                         value={account.password}
                         type="password"
+                        error={errors.password}
                         onChange={this.handleChange}
                     />
 {/*                    <div className="form-group">
