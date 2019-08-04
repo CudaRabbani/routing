@@ -1,12 +1,11 @@
 import React, {Component} from 'react';
+import Input from "./common/input";
 
 class LoginForm extends Component {
 
     state={
         account: {username: '', password: ''}
     };
-
-    username = React.createRef();
 
     handleSubmit = e => {
         e.preventDefault();
@@ -25,17 +24,21 @@ class LoginForm extends Component {
             <div className="containter">
                 <h3>Login</h3>
                 <form onSubmit={this.handleSubmit}>
-                    <div className="form-group">
-                        <label htmlFor="username">Username</label>
-                        <input type="text"
-                               className="form-control"
-                               id="username"
-                               name="username"
-                               value={account.username}
-                               onChange={this.handleChange}
-                               placeholder="Enter user name" />
-                    </div>
-                    <div className="form-group">
+                    <Input
+                        name="username"
+                        label="Username"
+                        value={account.username}
+                        type="text"
+                        onChange={this.handleChange}
+                    />
+                    <Input
+                        name="password"
+                        label="Password"
+                        value={account.password}
+                        type="password"
+                        onChange={this.handleChange}
+                    />
+{/*                    <div className="form-group">
                         <label htmlFor="password">Password</label>
                         <input type="password"
                                className="form-control"
@@ -44,7 +47,7 @@ class LoginForm extends Component {
                                value={account.password}
                                onChange={this.handleChange}
                                placeholder="Password" />
-                    </div>
+                    </div>*/}
                     <button type="submit" className="btn btn-primary">Login</button>
                 </form>
             </div>

@@ -2,22 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8dec8f7a-f00d-45f5-8233-b61203d754cf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/customers.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/like.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/loginForm.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/movies.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/rentals.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/fakeGenreService.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/fakeMovieService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/input.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/posts.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/productDetails.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/products.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/loginForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/loginForm.jsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -72,7 +59,7 @@
       <option name="presentableId" value="Default" />
       <updated>1564777296903</updated>
       <workItem from="1564777297960" duration="11160000" />
-      <workItem from="1564948626867" duration="5662000" />
+      <workItem from="1564948626867" duration="6507000" />
     </task>
     <servers />
   </component>
